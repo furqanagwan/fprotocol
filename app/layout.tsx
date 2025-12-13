@@ -12,15 +12,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MPROTOCOL | Optimize Your Existence",
+  title: "FPROTOCOL | Optimize Your Existence",
   description:
     "Data-driven curation of tools for health, wealth, and aesthetics. No fluff. Just effective protocols.",
   openGraph: {
-    title: "MPROTOCOL | Optimize Your Existence",
+    title: "FPROTOCOL | Optimize Your Existence",
     description:
       "Data-driven curation of tools for health, wealth, and aesthetics.",
-    url: "https://protocolm.vercel.app",
-    siteName: "MPROTOCOL",
+    url: "https://protocolf.vercel.app",
+    siteName: "FPROTOCOL",
     images: [
       {
         url: "/og-image.jpg",
@@ -33,7 +33,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPROTOCOL | Optimize Your Existence",
+    title: "FPROTOCOL | Optimize Your Existence",
     description:
       "Data-driven curation of tools for health, wealth, and aesthetics.",
   },
@@ -47,8 +47,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "MPROTOCOL",
-    url: "https://protocolm.vercel.app",
+    name: "FPROTOCOL",
+    url: "https://protocolf.vercel.app",
     description:
       "Data-driven curation of tools for health, wealth, and aesthetics.",
   };
