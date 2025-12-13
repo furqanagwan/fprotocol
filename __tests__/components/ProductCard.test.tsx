@@ -11,8 +11,8 @@ const mockProduct: Product = {
   reason: "Hygiene",
   frequency: "Daily",
   icon: <div data-testid="icon" />,
-  color: "text-blue-500",
-  bg: "bg-blue-50",
+  color: "text-pink-500",
+  bg: "bg-pink-50",
   price: "$",
   link: "https://example.com",
 };

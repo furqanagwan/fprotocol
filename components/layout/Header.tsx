@@ -27,7 +27,7 @@ export default function Header({
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center">
                 <span className="text-white dark:text-gray-900 font-bold text-lg">
-                  M
+                  F
                 </span>
               </div>
               <span className="font-bold text-xl tracking-tight">PROTOCOL</span>
@@ -56,30 +56,31 @@ export default function Header({
             </div>
           </div>
         </div>
-      </header>
+      </header >
 
       {/* MOBILE MENU */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 p-4 space-y-2">
-          {mainCategories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setActiveCategory(cat);
-                setIsMenuOpen(false);
-              }}
-              className={`block w-full text-left px-4 py-2 rounded-md ${
-                activeCategory === cat
+      {
+        isMenuOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 p-4 space-y-2">
+            {mainCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setIsMenuOpen(false);
+                }}
+                className={`block w-full text-left px-4 py-2 rounded-md ${activeCategory === cat
                   ? "bg-gray-100 dark:bg-gray-800 font-semibold"
                   : "text-gray-600 dark:text-gray-400"
-              }`}
-              aria-current={activeCategory === cat ? "page" : undefined}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      )}
+                  }`}
+                aria-current={activeCategory === cat ? "page" : undefined}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )
+      }
     </>
   );
 }
