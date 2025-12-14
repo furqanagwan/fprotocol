@@ -11,6 +11,8 @@ import {
   Zap,
 } from "lucide-react";
 
+export type ProductTier = "essential" | "advanced" | "optional";
+
 export interface Product {
   id: number;
   category: string;
@@ -29,6 +31,17 @@ export interface Product {
   link?: string;
   hideButton?: boolean;
   buttonText?: string;
+  tier?: ProductTier;
+}
+
+export interface Bundle {
+  id: string;
+  name: string;
+  description: string;
+  productIds: number[];
+  icon: React.ReactNode;
+  color: string;
+  bg: string;
 }
 
 export const products: Product[] = [
@@ -550,4 +563,108 @@ export const hierarchy: Record<string, string[]> = {
   Wealth: ["All", "Finance"],
   Aesthetics: ["All", "Grooming", "Hair", "Skin", "Teeth"],
   Lifestyle: ["All", "Fashion"],
+};
+
+// Protocol Bundles - Curated stacks for specific goals
+export const bundles: Bundle[] = [
+  {
+    id: "oral-health",
+    name: "Complete Oral Health Protocol",
+    description:
+      "Everything you need for optimal dental hygiene. Prevents cavities, gum disease, and bad breath.",
+    productIds: [1, 2, 3, 4, 33],
+    icon: <Smile className="w-6 h-6" />,
+    color: "text-rose-500",
+    bg: "bg-gradient-to-br from-rose-50 to-pink-100 dark:from-rose-900/20 dark:to-pink-900/20",
+  },
+  {
+    id: "anti-aging",
+    name: "Anti-Aging Skin Stack",
+    description:
+      "Science-backed products to slow visible aging. Protect, repair, and renew your skin daily.",
+    productIds: [11, 15, 16, 21],
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-purple-500",
+    bg: "bg-gradient-to-br from-purple-50 to-fuchsia-100 dark:from-purple-900/20 dark:to-fuchsia-900/20",
+  },
+  {
+    id: "fitness-essentials",
+    name: "Fitness Essentials",
+    description:
+      "The foundation for any training program. Build muscle, recover faster, and track progress.",
+    productIds: [5, 6, 7, 28, 30],
+    icon: <Dumbbell className="w-6 h-6" />,
+    color: "text-orange-500",
+    bg: "bg-gradient-to-br from-orange-50 to-amber-100 dark:from-orange-900/20 dark:to-amber-900/20",
+  },
+  {
+    id: "wealth-building",
+    name: "Wealth Building Fundamentals",
+    description:
+      "The proven path to financial independence. Budget, invest, and grow your net worth systematically.",
+    productIds: [9, 10, 23, 31],
+    icon: <Wallet className="w-6 h-6" />,
+    color: "text-emerald-500",
+    bg: "bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20",
+  },
+];
+
+// Tier assignments for key products (essential = must-have, advanced = optimization, optional = nice-to-have)
+export const productTiers: Record<number, ProductTier> = {
+  // Oral - essential basics
+  1: "essential", // Electric toothbrush
+  2: "essential", // Toothpaste
+  3: "advanced", // Mouthwash
+  4: "essential", // Tongue scraper
+  33: "advanced", // Interdental brush
+
+  // Fitness/Supplements
+  5: "optional", // Insanity
+  6: "optional", // P90X
+  7: "essential", // Creatine
+  13: "essential", // Multivitamin
+  28: "advanced", // Hydrowhey
+  29: "optional", // Casein
+  30: "optional", // Electrolytes
+
+  // Nutrition
+  8: "essential", // MyFitnessPal
+  22: "advanced", // MacroFactor
+
+  // Finance
+  9: "essential", // YNAB
+  10: "essential", // S&P 500
+  23: "essential", // HYSA
+  24: "advanced", // Real Estate
+  31: "essential", // Workplace pension
+
+  // Skin
+  11: "essential", // Cerave
+  15: "advanced", // Wellman
+  16: "essential", // Sunscreen
+  20: "advanced", // Accutane
+  21: "advanced", // Tretinoin
+
+  // Grooming
+  12: "optional", // Beardtrimmer
+  18: "optional", // Shaver
+  34: "optional", // Head shaver
+
+  // Hair
+  14: "advanced", // Finasteride
+  17: "advanced", // Minoxidil
+  19: "optional", // Pyrilutimide
+
+  // Fashion
+  25: "essential", // Sneakers
+  26: "advanced", // Suit
+  27: "optional", // Merino tee
+
+  // Teeth
+  32: "optional", // Whitestrips
+};
+
+// Helper to get tier for a product
+export const getProductTier = (productId: number): ProductTier => {
+  return productTiers[productId] || "optional";
 };

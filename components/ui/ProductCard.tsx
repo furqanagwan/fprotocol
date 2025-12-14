@@ -6,7 +6,11 @@ import {
   AlertTriangle,
   Copy,
   Check,
+  Star,
+  TrendingUp,
+  Circle,
 } from "lucide-react";
+import { getProductTier, ProductTier } from "@/lib/data";
 
 interface ProductCardProps {
   product: {
@@ -30,8 +34,33 @@ interface ProductCardProps {
   };
 }
 
+const tierConfig: Record<
+  ProductTier,
+  { label: string; icon: React.ReactNode; className: string }
+> = {
+  essential: {
+    label: "Essential",
+    icon: <Star className="w-3 h-3" />,
+    className:
+      "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
+  },
+  advanced: {
+    label: "Advanced",
+    icon: <TrendingUp className="w-3 h-3" />,
+    className:
+      "bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300",
+  },
+  optional: {
+    label: "Optional",
+    icon: <Circle className="w-3 h-3" />,
+    className: "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400",
+  },
+};
+
 export default function ProductCard({ product }: ProductCardProps) {
   const [copied, setCopied] = useState(false);
+  const tier = getProductTier(product.id);
+  const tierInfo = tierConfig[tier];
 
   const handleCopy = () => {
     if (product.link) {
@@ -49,11 +78,19 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.icon}
         </div>
         <div className="text-right">
-          {product.note && (
-            <span className="block text-xs font-bold tracking-wider text-fuchsia-600 dark:text-fuchsia-400 uppercase mb-1">
-              {product.note}
+          <div className="flex flex-col items-end gap-1">
+            <span
+              className={`flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full ${tierInfo.className}`}
+            >
+              {tierInfo.icon}
+              {tierInfo.label}
             </span>
-          )}
+            {product.note && (
+              <span className="text-xs font-bold tracking-wider text-fuchsia-600 dark:text-fuchsia-400 uppercase">
+                {product.note}
+              </span>
+            )}
+          </div>
           <span className="block text-xs font-bold tracking-wider text-gray-400 uppercase">
             {product.category}
           </span>

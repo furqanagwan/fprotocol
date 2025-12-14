@@ -5,6 +5,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* FPROTOCOL Theme - Purple/Pink */
+  --accent-primary: #a855f7; /* purple-500 */
+  --accent-secondary: #ec4899; /* pink-500 */
+  --accent-gradient-from: #a855f7; /* purple-500 */
+  --accent-gradient-to: #ec4899; /* pink-500 */
 }
 
 @theme inline {
@@ -28,7 +34,7 @@ body {
 }
 
 ::selection {
-  background-color: #ec4899; /* pink-500 */
+  background-color: #a855f7; /* purple-500 */
   color: white;
 }
 
