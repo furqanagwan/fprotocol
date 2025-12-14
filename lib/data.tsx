@@ -409,64 +409,70 @@ export const products: Product[] = [
     price: "$$",
   },
 
-  // GROOMING
+  // GROOMING (Female Hair Removal)
   {
     id: 12,
     category: "Aesthetics",
     subcategory: "Grooming",
-    name: "Philips Beardtrimmer 9000 Prestige",
-    reason: "Ultimate steel precision for beard styling and trimming.",
-    frequency: "As needed",
+    name: "Philips Lumea IPL 9900 Series",
+    reason:
+      "IPL (Intense Pulsed Light) targets melanin in hair follicles, providing long-term hair reduction. FDA-cleared for permanent hair reduction.",
+    frequency: "Every 2 weeks initially, then monthly maintenance",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-purple-500",
     bg: "bg-purple-50 dark:bg-purple-900/20",
     price: "$$$",
-    link: "https://www.philips.co.uk/c-p/BT9810_13/beard-trimmer-9000-prestige-beard-trimmer",
-  },
-  {
-    id: 18,
-    category: "Aesthetics",
-    subcategory: "Grooming",
-    name: "Philips Shaver S9000 Prestige",
-    reason: "Long-lasting close shave, intelligent skin comfort.",
-    frequency: "Daily/As needed",
-    icon: <Sparkles className="w-6 h-6" />,
-    color: "text-purple-500",
-    bg: "bg-purple-50 dark:bg-purple-900/20",
-    price: "$$$",
-    link: "https://www.philips.co.uk/c-m-pe/face-shavers/latest?utm_id=20866219588&origin=7_9164824656_20866219588_156586002653_295615961976&gclsrc=aw.ds&gad_source=1&gad_campaignid=20866219588&gbraid=0AAAAAD9m5bD6Kie5I6hlUipmsLFxvQeOG&gclid=CjwKCAiA0eTJBhBaEiwA-Pa-haD7DlsXruA9b0IcTWFBP3vD1eB2H_UfsXvclQUod4ZflQUlfb0PjBoCq2EQAvD_BwE#availability=instock&filters=FK_MG_23_SERIES",
-  },
-  {
-    id: 34,
-    category: "Aesthetics",
-    subcategory: "Grooming",
-    name: "Phillips Head Shaver Pro 9000 Series",
-    reason: "Essential shaver with comfortcut.",
-    frequency: "As needed",
-    icon: <Sparkles className="w-6 h-6" />,
-    color: "text-purple-500",
-    bg: "bg-purple-50 dark:bg-purple-900/20",
-    price: "$$$",
-    link: "https://www.philips.co.uk/c-p/HS5980_15/head-shaver-pro-5000-series-essential-shaver-with-comfortcut",
+    link: "https://www.philips.co.uk/c-p/BRI958_00/lumea-ipl-9000-series-ipl-hair-removal-device",
   },
 
-  // HAIR
+  // HAIR (Female Pattern Hair Loss)
   {
     id: 14,
     category: "Aesthetics",
     subcategory: "Hair",
-    name: "Propecia / Avodart (Finasteride / Dutasteride)",
+    name: "Spironolactone (Aldactone)",
     reason:
-      "5-alpha reductase inhibitors are the only clinically proven way to stop the hormonal cause of hair loss (DHT).",
+      "Anti-androgen medication that blocks testosterone and DHT at the receptor level. First-line treatment for female pattern hair loss.",
     frequency: "Daily (Prescription)",
     sideEffect:
-      "Potential sexual side effects (1-2%), brain fog, or mood changes. Consult a doctor.",
-    note: "Genetic",
+      "Can cause potassium elevation, breast tenderness, menstrual irregularities. Not safe during pregnancy. Consult a doctor.",
+    note: "Hormonal",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-purple-500",
     bg: "bg-purple-50 dark:bg-purple-900/20",
-    price: "$$",
+    price: "$",
     hideButton: true,
+  },
+  {
+    id: 35,
+    category: "Aesthetics",
+    subcategory: "Hair",
+    name: "Derma Roller (0.5mm Microneedling)",
+    reason:
+      "Microneedling stimulates collagen and activates stem cells in hair follicles. Studies show 40% improvement in hair count when combined with Minoxidil.",
+    frequency: "1x Weekly",
+    sideEffect: "Temporary redness and scalp sensitivity for 24-48 hours.",
+    note: "Stimulation",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-purple-500",
+    bg: "bg-purple-50 dark:bg-purple-900/20",
+    price: "$",
+    link: "https://www.amazon.co.uk/dp/B0BZR4LQWQ",
+  },
+  {
+    id: 36,
+    category: "Aesthetics",
+    subcategory: "Hair",
+    name: "Low-Level Laser Therapy Cap (Theradome/iRestore)",
+    reason:
+      "FDA-cleared photobiomodulation device that stimulates hair follicles using red light (650nm). Increases ATP production in hair cells.",
+    frequency: "Every other day, 20-30 min sessions",
+    note: "Light Therapy",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-purple-500",
+    bg: "bg-purple-50 dark:bg-purple-900/20",
+    price: "$$$",
+    link: "https://www.theradome.com/",
   },
   {
     id: 17,
@@ -645,15 +651,15 @@ export const productTiers: Record<number, ProductTier> = {
   20: "advanced", // Accutane
   21: "advanced", // Tretinoin
 
-  // Grooming
-  12: "optional", // Beardtrimmer
-  18: "optional", // Shaver
-  34: "optional", // Head shaver
+  // Grooming (Female)
+  12: "essential", // Philips Lumea IPL
 
-  // Hair
-  14: "advanced", // Finasteride
+  // Hair (Female)
+  14: "advanced", // Spironolactone
   17: "advanced", // Minoxidil
   19: "optional", // Pyrilutimide
+  35: "essential", // Derma Roller
+  36: "advanced", // LLLT Cap
 
   // Fashion
   25: "essential", // Sneakers
