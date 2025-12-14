@@ -326,45 +326,171 @@ export const products: Product[] = [
     hideButton: true,
   },
 
-  // LIFESTYLE
+  // LIFESTYLE - FASHION (Female)
   {
     id: 25,
     category: "Lifestyle",
     subcategory: "Fashion",
-    name: "White Leather Sneakers (Common Projects / Koio)",
-    reason: "Versatile foundation for almost any outfit.",
+    name: "White Leather Sneakers (Common Projects)",
+    reason:
+      "Minimalist Italian-made sneakers. Versatile foundation for almost any outfit from jeans to dresses.",
     frequency: "Daily",
     note: "Essential",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-pink-500",
     bg: "bg-pink-50 dark:bg-pink-900/20",
-    price: "$$",
+    price: "$$$",
+    link: "https://www.commonprojects.com/",
   },
   {
     id: 26,
     category: "Lifestyle",
     subcategory: "Fashion",
-    name: "Tailored Navy Suit",
-    reason: "The standard for formal competence. Fit is everything.",
+    name: "Tailored Blazer (Theory / Reiss)",
+    reason:
+      "A well-fitted blazer elevates any outfit. Choose neutral colors like black, navy, or camel.",
     frequency: "As needed",
     note: "Essential",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-pink-500",
     bg: "bg-pink-50 dark:bg-pink-900/20",
     price: "$$$",
+    link: "https://www.theory.com/",
   },
   {
     id: 27,
     category: "Lifestyle",
     subcategory: "Fashion",
-    name: "Merino Wool Tee",
-    reason: "Technical fabric performance with natural aesthetics.",
-    frequency: "Daily",
-    note: "Daily",
+    name: "Cashmere Sweater (Everlane / Naadam)",
+    reason:
+      "Luxurious warmth that lasts for years. Essential for layering in cooler months.",
+    frequency: "Seasonal",
+    note: "Luxury",
     icon: <Sparkles className="w-6 h-6" />,
     color: "text-pink-500",
     bg: "bg-pink-50 dark:bg-pink-900/20",
-    price: "$",
+    price: "$$",
+    link: "https://www.everlane.com/",
+  },
+  {
+    id: 37,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Designer Tote Bag (Goyard / YSL)",
+    reason:
+      "A statement bag that functions as art. Goyard Saint Louis or YSL Shopping Tote are timeless investments.",
+    frequency: "Daily",
+    note: "Investment",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$$$",
+    link: "https://www.goyard.com/",
+  },
+  {
+    id: 38,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Silk Blouse (Equipment / Zimmermann)",
+    reason:
+      "Effortlessly elegant. Transitions from office to evening. Machine-washable silk options exist now.",
+    frequency: "Weekly",
+    note: "Elevated",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$$",
+    link: "https://www.equipmentfr.com/",
+  },
+  {
+    id: 39,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "High-Waisted Denim (Agolde / Citizens of Humanity)",
+    reason:
+      "The perfect fitting jeans are life-changing. High-waisted styles are universally flattering.",
+    frequency: "Daily",
+    note: "Essential",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$",
+    link: "https://agolde.com/",
+  },
+  {
+    id: 40,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Heeled Boots (Gianvito Rossi / Stuart Weitzman)",
+    reason:
+      "Ankle boots with a block heel work for everything from dresses to jeans. Invest in quality leather.",
+    frequency: "Seasonal",
+    note: "Statement",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$$",
+    link: "https://www.stuartweitzman.com/",
+  },
+  {
+    id: 41,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Kith Women's Hoodie",
+    reason:
+      "Premium streetwear meets comfort. Limited drops and collaborations make each piece special.",
+    frequency: "Casual",
+    note: "Streetwear",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$",
+    link: "https://kith.com/collections/kith-women",
+  },
+  {
+    id: 42,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Gucci Horsebit Loafers",
+    reason:
+      "Iconic Italian craftsmanship. The horsebit detail is instantly recognizable. Classic investment.",
+    frequency: "Daily",
+    note: "Luxury",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$$$",
+    link: "https://www.gucci.com/",
+  },
+  {
+    id: 43,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Lululemon Define Jacket",
+    reason:
+      "The best athleisure-to-street transition piece. Flattering fit, technical fabric, endless versatility.",
+    frequency: "Daily",
+    note: "Athleisure",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$",
+    link: "https://shop.lululemon.com/",
+  },
+  {
+    id: 44,
+    category: "Lifestyle",
+    subcategory: "Fashion",
+    name: "Reformation Midi Dress",
+    reason:
+      "Sustainable, flattering, and Instagram-worthy. Their signature silhouettes suit all body types.",
+    frequency: "Occasion",
+    note: "Sustainable",
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-900/20",
+    price: "$$",
+    link: "https://www.thereformation.com/",
   },
 
   // SKIN
@@ -613,6 +739,36 @@ export const bundles: Bundle[] = [
     color: "text-emerald-500",
     bg: "bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20",
   },
+  {
+    id: "beauty-essentials",
+    name: "Beauty Essentials Stack",
+    description:
+      "Complete skincare routine from cleanser to sunscreen. Prevent aging and maintain glowing skin.",
+    productIds: [11, 16, 21, 12],
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-pink-500",
+    bg: "bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-900/20 dark:to-rose-900/20",
+  },
+  {
+    id: "capsule-wardrobe",
+    name: "Capsule Wardrobe Foundation",
+    description:
+      "Investment pieces that mix and match endlessly. Build a timeless, versatile closet.",
+    productIds: [25, 26, 27, 39, 42],
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-fuchsia-500",
+    bg: "bg-gradient-to-br from-fuchsia-50 to-purple-100 dark:from-fuchsia-900/20 dark:to-purple-900/20",
+  },
+  {
+    id: "hair-restoration",
+    name: "Hair Restoration Protocol",
+    description:
+      "Comprehensive approach to addressing female pattern hair loss with proven treatments.",
+    productIds: [14, 17, 35, 36],
+    icon: <Sparkles className="w-6 h-6" />,
+    color: "text-violet-500",
+    bg: "bg-gradient-to-br from-violet-50 to-indigo-100 dark:from-violet-900/20 dark:to-indigo-900/20",
+  },
 ];
 
 // Tier assignments for key products (essential = must-have, advanced = optimization, optional = nice-to-have)
@@ -662,9 +818,17 @@ export const productTiers: Record<number, ProductTier> = {
   36: "advanced", // LLLT Cap
 
   // Fashion
-  25: "essential", // Sneakers
-  26: "advanced", // Suit
-  27: "optional", // Merino tee
+  25: "essential", // White Sneakers
+  26: "essential", // Tailored Blazer
+  27: "optional", // Cashmere Sweater
+  37: "advanced", // Designer Tote
+  38: "optional", // Silk Blouse
+  39: "essential", // High-Waisted Denim
+  40: "optional", // Heeled Boots
+  41: "optional", // Kith Hoodie
+  42: "advanced", // Gucci Loafers
+  43: "essential", // Lululemon Define
+  44: "optional", // Reformation Dress
 
   // Teeth
   32: "optional", // Whitestrips
