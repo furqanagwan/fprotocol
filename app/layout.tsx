@@ -38,6 +38,17 @@ export const metadata = {
     description:
       "Data-driven curation of tools for health, wealth, and aesthetics.",
   },
+  manifest: "/manifest.json",
+  themeColor: "#a855f7",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "FPROTOCOL",
+  },
+  icons: {
+    icon: "/icons/icon-512x512.png",
+    apple: "/icons/icon-192x192.png",
+  },
 };
 
 export default function RootLayout({
