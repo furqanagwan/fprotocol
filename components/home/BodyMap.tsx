@@ -177,6 +177,82 @@ const femaleHealthPoints: HealthPoint[] = [
       },
     ],
   },
+  {
+    id: "uterus",
+    name: "Menstrual & Uterine Health",
+    position: [0, -0.35, 0.35],
+    icon: <Heart className="w-4 h-4" />,
+    conditions: [
+      {
+        name: "Menstrual Cycle Tracking",
+        description:
+          "Your cycle is a vital sign. Track length, flow, and symptoms. Irregular cycles can indicate hormonal imbalances or other conditions.",
+        checkFrequency: "Track daily using an app (Clue, Flo, etc.)",
+      },
+      {
+        name: "Endometriosis",
+        description:
+          "Tissue similar to the uterine lining grows outside the uterus. Affects 1 in 10 women. Causes severe period pain, heavy bleeding, and fertility issues.",
+        checkFrequency: "Consult doctor if severe period pain",
+      },
+      {
+        name: "Fibroids (Uterine)",
+        description:
+          "Non-cancerous growths in the uterus. Very common - up to 80% of women develop them by age 50. Can cause heavy periods and pelvic pressure.",
+        checkFrequency: "Pelvic exam annually, ultrasound if symptomatic",
+      },
+      {
+        name: "Premenstrual Syndrome (PMS)",
+        description:
+          "Physical and emotional symptoms 1-2 weeks before period. Severe form (PMDD) affects 3-8% of women and may need treatment.",
+        checkFrequency: "Track symptoms to identify patterns",
+      },
+      {
+        name: "Amenorrhea (Missing Periods)",
+        description:
+          "Missing 3+ periods in a row. Can be caused by stress, extreme exercise, low body weight, PCOS, or thyroid issues. Needs evaluation.",
+        checkFrequency: "Seek care if missing 3+ periods",
+      },
+    ],
+  },
+  {
+    id: "pregnancy",
+    name: "Pregnancy & Fertility",
+    position: [0.4, -0.2, 0.35],
+    icon: <Heart className="w-4 h-4" />,
+    conditions: [
+      {
+        name: "Preconception Health",
+        description:
+          "Start folic acid 3 months before trying to conceive. Get up to date on vaccines, check medications, and optimize your health.",
+        checkFrequency: "Preconception checkup when planning",
+      },
+      {
+        name: "Fertility Awareness",
+        description:
+          "Understand your fertile window (typically 6 days per cycle). Ovulation tests and tracking can help identify best timing.",
+        checkFrequency: "AMH and FSH tests if concerned (age 30+)",
+      },
+      {
+        name: "Prenatal Care",
+        description:
+          "Regular checkups throughout pregnancy are vital. First trimester: genetic screening. Second: anatomy scan. Third: growth monitoring.",
+        checkFrequency: "Monthly (early), then weekly (late pregnancy)",
+      },
+      {
+        name: "Gestational Diabetes",
+        description:
+          "High blood sugar during pregnancy. Usually develops around 24-28 weeks. Diet and exercise can often control it.",
+        checkFrequency: "Glucose screening at 24-28 weeks",
+      },
+      {
+        name: "Postpartum Mental Health",
+        description:
+          "Baby blues (2 weeks) vs postpartum depression (longer). Up to 1 in 5 women experience PPD. Seek help early - treatment works.",
+        checkFrequency: "Screen at 6 weeks postpartum, earlier if needed",
+      },
+    ],
+  },
 ];
 
 function BodyModel({
